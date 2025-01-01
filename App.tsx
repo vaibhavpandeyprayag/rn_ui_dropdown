@@ -5,9 +5,10 @@
  * @format
  */
 
-import React from 'react';
+import React, {useState} from 'react';
 import type {PropsWithChildren} from 'react';
 import {
+  Pressable,
   SafeAreaView,
   ScrollView,
   StatusBar,
@@ -17,43 +18,8 @@ import {
   View,
 } from 'react-native';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-
-type SectionProps = PropsWithChildren<{
-  title: string;
-}>;
-
-function Section({children, title}: SectionProps): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-}
+import {Colors} from 'react-native/Libraries/NewAppScreen';
+import RnDropdown from './src/RnDropdown';
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -61,35 +27,43 @@ function App(): React.JSX.Element {
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
-
+  const [data, setData] = useState([
+    {id: '1', name: 'Delhi'},
+    {id: '2', name: 'Mumbai'},
+    {id: '3', name: 'Bengaluru'},
+    {id: '4', name: 'Goa'},
+    {id: '5', name: 'Chennai'},
+    {id: '6', name: 'Jaipur'},
+    {id: '7', name: 'Hyderabad'},
+  ]);
+  const [val, setVal] = useState<any>(null);
   return (
-    <SafeAreaView style={backgroundStyle}>
+    <SafeAreaView style={{}}>
       <StatusBar
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         backgroundColor={backgroundStyle.backgroundColor}
       />
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
+        style={{
+          padding: 8,
+          height: '100%',
+          backgroundColor: 'rgb(226, 224, 224)',
+        }}>
+        <View>
+          <RnDropdown
+            options={data}
+            selectedOption={val}
+            bindingProp={'id'}
+            displayProp={'name'}
+            onSelectionChange={(val: any) => setVal(val)}
+          />
+          <Pressable
+            onPress={() => {
+              setVal(null);
+            }}>
+            <Text>Reset</Text>
+          </Pressable>
         </View>
       </ScrollView>
     </SafeAreaView>
