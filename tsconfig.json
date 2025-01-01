@@ -10,8 +10,8 @@
   },
   "include": [
     "src/**/*",
-    "RnDropdown.tsx",
-    "RnDropdown.d.ts",
+    "RnUiDropdown.tsx",
+    "RnUiDropdown.d.ts",
     "src/**/*.d.ts",
     "src/**/*.png"
   ],

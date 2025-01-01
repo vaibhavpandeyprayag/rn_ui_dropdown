@@ -33,7 +33,7 @@ interface PropsInterface {
   placeholderTextColor?: string;
 }
 
-const RnDropdown = ({
+const RnUiDropdown = ({
   options,
   selectedOption,
   bindingProp,
@@ -240,4 +240,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default RnDropdown;
+export default RnUiDropdown;

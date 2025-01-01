@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const react_1 = require("react");
 const react_native_1 = require("react-native");
-const RnDropdown = ({ options, selectedOption, bindingProp, displayProp, onSearchTextChange, onSelectionChange, containerStyle, selectedOptionStyle, selectedOptionTextStyle, optionsStyle, optionsTextStyle, searchBoxStyle, searchTextStyle, placeholderTextColor, }) => {
+const RnUiDropdown = ({ options, selectedOption, bindingProp, displayProp, onSearchTextChange, onSelectionChange, containerStyle, selectedOptionStyle, selectedOptionTextStyle, optionsStyle, optionsTextStyle, searchBoxStyle, searchTextStyle, placeholderTextColor, }) => {
     const [modalVisible, setModalVisible] = (0, react_1.useState)(false);
     const [selectedValue, setSelectedValue] = (0, react_1.useState)(selectedOption);
     const [filteredDataList, setFilteredDataList] = (0, react_1.useState)([]);
@@ -141,4 +141,4 @@ const styles = react_native_1.StyleSheet.create({
         width: '80%',
     },
 });
-exports.default = RnDropdown;
+exports.default = RnUiDropdown;

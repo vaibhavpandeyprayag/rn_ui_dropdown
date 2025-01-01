@@ -1,8 +1,8 @@
 {
-  "name": "rn_dropdown",
+  "name": "rn_ui_dropdown",
   "version": "0.0.1",
   "private": false,
-  "main": "dist/RnDropdown.js",
+  "main": "dist/RnUiDropdown.js",
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
@@ -43,8 +43,8 @@
   "files": [
     "dist",
     "src",
-    "RnDropdown.tsx",
-    "RnDropdown.d.ts",
+    "RnUiDropdown.tsx",
+    "RnUiDropdown.d.ts",
     "caret.webp",
     "close.png"
   ]

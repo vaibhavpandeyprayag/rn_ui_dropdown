@@ -19,7 +19,7 @@ import {
 } from 'react-native';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
-import RnDropdown from './src/RnDropdown';
+import RnUiDropdown from './src/RnUiDropdown';
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -51,7 +51,7 @@ function App(): React.JSX.Element {
           backgroundColor: 'rgb(226, 224, 224)',
         }}>
         <View>
-          <RnDropdown
+          <RnUiDropdown
             options={data}
             selectedOption={val}
             bindingProp={'id'}

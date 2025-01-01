@@ -1,7 +1,7 @@
 import React from 'react';
 import {ViewStyle, TextStyle, ImageStyle, FlexStyle} from 'react-native';
 
-export interface RnDropdownProps {
+export interface RnUiDropdownProps {
   options: any[];
   selectedOption: any;
   bindingProp: string;
@@ -18,5 +18,5 @@ export interface RnDropdownProps {
   placeholderTextColor?: string;
 }
 
-declare const RnDropdown: React.FC<RnDropdownProps>;
+declare const RnDropdown: React.FC<RnUiDropdownProps>;
 export default RnDropdown;
