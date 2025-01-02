@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": false,
   "main": "dist/RnUiDropdown.js",
+  "license": "MIT",
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",

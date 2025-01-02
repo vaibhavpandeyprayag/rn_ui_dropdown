@@ -50,20 +50,21 @@ function App(): React.JSX.Element {
           height: '100%',
           backgroundColor: 'rgb(226, 224, 224)',
         }}>
-        <View>
+        <View style={{marginTop: 16}}>
           <RnUiDropdown
             options={data}
             selectedOption={val}
             bindingProp={'id'}
             displayProp={'name'}
             onSelectionChange={(val: any) => setVal(val)}
+            containerStyle={{
+              borderTopWidth: 1,
+              borderStartWidth: 1,
+              borderEndWidth: 1,
+              borderRadius: 8,
+              backgroundColor: 'white',
+            }}
           />
-          <Pressable
-            onPress={() => {
-              setVal(null);
-            }}>
-            <Text>Reset</Text>
-          </Pressable>
         </View>
       </ScrollView>
     </SafeAreaView>
