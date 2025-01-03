@@ -64,6 +64,8 @@ function App(): React.JSX.Element {
               borderRadius: 8,
               backgroundColor: 'white',
             }}
+            placeholderText={'Select option'}
+            searchPlaceholderText={'Search options'}
           />
         </View>
       </ScrollView>

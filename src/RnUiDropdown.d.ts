@@ -15,7 +15,8 @@ export interface RnUiDropdownProps {
   optionsTextStyle?: ViewStyle | TextStyle | ImageStyle | FlexStyle;
   searchBoxStyle?: ViewStyle | TextStyle | ImageStyle | FlexStyle;
   searchTextStyle?: ViewStyle | TextStyle | ImageStyle | FlexStyle;
-  placeholderTextColor?: string;
+  placeholderText?: string;
+  searchPlaceholderText?: string;
 }
 
 declare const RnDropdown: React.FC<RnUiDropdownProps>;

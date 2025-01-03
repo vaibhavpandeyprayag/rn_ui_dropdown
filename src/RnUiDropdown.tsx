@@ -30,7 +30,8 @@ interface PropsInterface {
   optionsTextStyle?: ViewStyle | TextStyle | ImageStyle | FlexStyle;
   searchBoxStyle?: ViewStyle | TextStyle | ImageStyle | FlexStyle;
   searchTextStyle?: ViewStyle | TextStyle | ImageStyle | FlexStyle;
-  placeholderTextColor?: string;
+  placeholderText?: string;
+  searchPlaceholderText?: string;
 }
 
 const RnUiDropdown = ({
@@ -47,7 +48,8 @@ const RnUiDropdown = ({
   optionsTextStyle,
   searchBoxStyle,
   searchTextStyle,
-  placeholderTextColor,
+  placeholderText,
+  searchPlaceholderText,
 }: PropsInterface) => {
   const [modalVisible, setModalVisible] = useState(false);
   const [selectedValue, setSelectedValue] = useState(selectedOption);
@@ -80,7 +82,9 @@ const RnUiDropdown = ({
             {limitText(
               options?.filter(
                 option => option[bindingProp] == selectedValue,
-              )?.[0]?.[displayProp] ?? 'Select',
+              )?.[0]?.[displayProp] ??
+                placeholderText ??
+                'Select',
               20,
             )}
           </Text>
@@ -134,8 +138,7 @@ const RnUiDropdown = ({
                   width: '80%',
                   ...searchTextStyle,
                 }}
-                placeholder={'Search'}
-                placeholderTextColor={placeholderTextColor}
+                placeholder={searchPlaceholderText ?? 'Search'}
                 onChangeText={val => {
                   if (onSearchTextChange != null) {
                     onSearchTextChange(val);

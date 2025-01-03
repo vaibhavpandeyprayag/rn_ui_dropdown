@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const react_1 = require("react");
 const react_native_1 = require("react-native");
-const RnUiDropdown = ({ options, selectedOption, bindingProp, displayProp, onSearchTextChange, onSelectionChange, containerStyle, selectedOptionStyle, selectedOptionTextStyle, optionsStyle, optionsTextStyle, searchBoxStyle, searchTextStyle, placeholderTextColor, }) => {
+const RnUiDropdown = ({ options, selectedOption, bindingProp, displayProp, onSearchTextChange, onSelectionChange, containerStyle, selectedOptionStyle, selectedOptionTextStyle, optionsStyle, optionsTextStyle, searchBoxStyle, searchTextStyle, placeholderText, searchPlaceholderText, }) => {
     const [modalVisible, setModalVisible] = (0, react_1.useState)(false);
     const [selectedValue, setSelectedValue] = (0, react_1.useState)(selectedOption);
     const [filteredDataList, setFilteredDataList] = (0, react_1.useState)([]);
@@ -30,7 +30,9 @@ const RnUiDropdown = ({ options, selectedOption, bindingProp, displayProp, onSea
             ...(selectedValue ? styles.selectedItemText : styles.placeholder),
             ...selectedOptionTextStyle,
         }}>
-            {limitText(options?.filter(option => option[bindingProp] == selectedValue)?.[0]?.[displayProp] ?? 'Select', 20)}
+            {limitText(options?.filter(option => option[bindingProp] == selectedValue)?.[0]?.[displayProp] ??
+            placeholderText ??
+            'Select', 20)}
           </react_native_1.Text>
         </react_native_1.View>
         {selectedValue != null && (<react_native_1.Pressable android_ripple={{ color: 'rgba(220, 220, 220, 1)' }} style={{ ...styles.expandButton }} onPress={() => setSelectedValue(null)}>
@@ -59,7 +61,7 @@ const RnUiDropdown = ({ options, selectedOption, bindingProp, displayProp, onSea
             borderTopLeftRadius: 4,
             width: '80%',
             ...searchTextStyle,
-        }} placeholder={'Search'} placeholderTextColor={placeholderTextColor} onChangeText={val => {
+        }} placeholder={searchPlaceholderText ?? 'Search'} onChangeText={val => {
             if (onSearchTextChange != null) {
                 onSearchTextChange(val);
             }
