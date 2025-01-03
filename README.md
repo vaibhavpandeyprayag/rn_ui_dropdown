@@ -54,15 +54,6 @@ The property of option which is stored in state specified as 'selectedOption'.
 
 The property of option which is displayed when an option is selected.
 
-### onSearchTextChange (optional): Function
-
-The optional function which is called when search text is changed.
-By default, when search text changes, it filters the options based on the text.
-
-### onSelectionChange: Function
-
-The function which is called when an option is selected.
-
 ### containerStyle (optional): ViewStyle | TextStyle | ImageStyle | FlexStyle
 
 Style for overall dropdown.
@@ -98,3 +89,14 @@ Placeholder text for dropdown when no option is selected
 ### searchPlaceholderText (optional): string
 
 Placeholder text for search box
+
+## Functions
+
+### onSelectionChange: Function
+
+The function which is called when an option is selected.
+
+### onSearchTextChange (optional): Function
+
+The optional function which is called when search text is changed.
+By default, when search text changes, it filters the options based on the text.
