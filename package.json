@@ -1,9 +1,22 @@
 {
   "name": "rn_ui_dropdown",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "private": false,
   "main": "dist/RnUiDropdown.js",
   "license": "MIT",
+  "keywords": [
+    "react-native",
+    "react-native-ui",
+    "dropdown",
+    "select",
+    "ui-component",
+    "react-native-dropdown",
+    "rn-ui-dropdown",
+    "react-native-picker",
+    "react-native-select",
+    "searchable-dropdown",
+    "options"
+  ],
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
