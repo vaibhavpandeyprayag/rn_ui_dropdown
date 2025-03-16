@@ -4,10 +4,37 @@
 
 ## Usage
 
+### Single-select
+
 ```typescript
 import RnUiDropdown from 'rn_ui_dropdown';
 
 const [selectedLocId, setSelectedLocId] = useState < any > null;
+const locationList = [
+  {value: 1, label: 'Delhi'},
+  {value: 2, label: 'Mumbai'},
+  {value: 3, label: 'Bengaluru'},
+  {value: 4, label: 'Goa'},
+  {value: 5, label: 'Chennai'},
+  {value: 6, label: 'Jaipur'},
+  {value: 7, label: 'Hyderabad'},
+];
+
+<RnUiDropdown
+  options={locationList}
+  bindingProp={'value'}
+  displayProp={'label'}
+  selectedOption={selectedLocId}
+  onSelectionChange={(val: any) => setSelectedLocId(val)}
+/>;
+```
+
+### Multi-select
+
+```typescript
+import RnUiDropdown from 'rn_ui_dropdown';
+
+const [selectedLocId, setSelectedLocId] = useState < any > [];
 const locationList = [
   {value: 1, label: 'Delhi'},
   {value: 2, label: 'Mumbai'},
@@ -45,6 +72,10 @@ The list/array of object where every object represents an option.
 ### selectedOption: any
 
 The variable/state which contains the selected option.
+
+### multiSelect: boolean
+
+Boolean to switch to single-select/multi-select mode. In case of single-select, pass single value (null for default) in selectedOption. And for multi-select, pass array in selectedOption ([] for default).
 
 ### bindingProp: string
 

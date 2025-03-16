@@ -7,4 +7,4 @@ import App from './App';
 import {name as appName} from './app.json';
 import RnDropdown from './src/RnUiDropdown';
 
-AppRegistry.registerComponent(appName, () => RnDropdown);
+AppRegistry.registerComponent(appName, () => App);

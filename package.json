@@ -1,6 +1,6 @@
 {
   "name": "rn_ui_dropdown",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "private": false,
   "main": "dist/RnUiDropdown.js",
   "license": "MIT",
@@ -15,7 +15,15 @@
     "react-native-picker",
     "react-native-select",
     "searchable-dropdown",
-    "options"
+    "options",
+    "multi-select",
+    "multi-select-options",
+    "multiple-select",
+    "multi-select-dropdown",
+    "react-native-multi-select",
+    "react-native-multi-select-options",
+    "react-native-multiple-select",
+    "react-native-multi-select-dropdown"
   ],
   "scripts": {
     "android": "react-native run-android",
@@ -60,6 +68,7 @@
     "RnUiDropdown.tsx",
     "RnUiDropdown.d.ts",
     "caret.webp",
-    "close.png"
+    "close.png",
+    "checkbox.png"
   ]
 }

@@ -28,13 +28,21 @@ function App(): React.JSX.Element {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
   const [data, setData] = useState([
-    {id: '1', name: 'Delhi'},
-    {id: '2', name: 'Mumbai'},
-    {id: '3', name: 'Bengaluru'},
-    {id: '4', name: 'Goa'},
-    {id: '5', name: 'Chennai'},
-    {id: '6', name: 'Jaipur'},
-    {id: '7', name: 'Hyderabad'},
+    {id: 1, name: 'Delhi'},
+    {id: 2, name: 'Mumbai'},
+    {
+      id: 3,
+      name: 'MSAMB will handle this action from here',
+    },
+    {id: 4, name: 'Goa'},
+    {id: 5, name: 'Chennai'},
+    {id: 6, name: 'Jaipur'},
+    {id: 7, name: 'Hyderabad'},
+    {id: 8, name: 'Bengaluru'},
+    {id: 9, name: 'Goa'},
+    {id: 10, name: 'Chennai'},
+    {id: 11, name: 'Jaipur'},
+    {id: 2, name: 'Hyderabad'},
   ]);
   const [val, setVal] = useState<any>(null);
   return (
@@ -46,28 +54,41 @@ function App(): React.JSX.Element {
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={{
-          padding: 8,
+          padding: 10,
+          marginVertical: 16,
           height: '100%',
           backgroundColor: 'rgb(226, 224, 224)',
         }}>
-        <View style={{marginTop: 16}}>
-          <RnUiDropdown
-            options={data}
-            selectedOption={val}
-            bindingProp={'id'}
-            displayProp={'name'}
-            onSelectionChange={(val: any) => setVal(val)}
-            containerStyle={{
-              borderTopWidth: 1,
-              borderStartWidth: 1,
-              borderEndWidth: 1,
-              borderRadius: 8,
-              backgroundColor: 'white',
-            }}
-            placeholderText={'Select option'}
-            searchPlaceholderText={'Search options'}
-          />
-        </View>
+        {/* <View style={{marginVertical: 16}}> */}
+        <RnUiDropdown
+          multiSelect={false}
+          options={data}
+          selectedOption={val}
+          bindingProp={'id'}
+          displayProp={'name'}
+          onSelectionChange={(val: any) => setVal(val)}
+          containerStyle={{
+            backgroundColor: 'white',
+          }}
+          placeholderText={'Select option'}
+          searchPlaceholderText={'Search options'}
+        />
+        {/* </View> */}
+        <Pressable>
+          <Text>Get me</Text>
+        </Pressable>
+        <Pressable>
+          <Text>Get me</Text>
+        </Pressable>
+        <Pressable>
+          <Text>Get me</Text>
+        </Pressable>
+        <Pressable>
+          <Text>Get me</Text>
+        </Pressable>
+        <Pressable>
+          <Text>Get me</Text>
+        </Pressable>
       </ScrollView>
     </SafeAreaView>
   );

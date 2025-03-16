@@ -6,6 +6,7 @@ export interface RnUiDropdownProps {
   selectedOption: any;
   bindingProp: string;
   displayProp: string;
+  multiSelect?: boolean;
   onSearchTextChange?: Function;
   onSelectionChange: Function;
   containerStyle?: ViewStyle | TextStyle | ImageStyle | FlexStyle;
