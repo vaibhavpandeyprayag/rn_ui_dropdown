@@ -1,6 +1,6 @@
 # rn_ui_dropdown
 
-`rn_ui_dropdown` is a customizable dropdown component for React Native that allows you to easily add a dropdown menu with options, selection handling, and dynamic rendering.
+`rn_ui_dropdown` is a customizable dropdown component for React Native that allows you to easily add a dropdown menu with options, selection handling, and dynamic rendering. It provides both single-select and multi-select modes
 
 ## Usage
 
@@ -54,14 +54,21 @@ const locationList = [
 />;
 ```
 
-## Screenshots
+## Single-select Screenshots
 
 <p align="left">
-  <img src="https://raw.githubusercontent.com/vaibhavpandeyprayag/rn_dropdown/main/src/ss_default.png" alt="Screenshot 1" width="300" />
-  <img src="https://raw.githubusercontent.com/vaibhavpandeyprayag/rn_dropdown/main/src/ss_options.png" alt="Screenshot 2" width="300" />
-  <img src="https://raw.githubusercontent.com/vaibhavpandeyprayag/rn_dropdown/main/src/ss_selected.png" alt="Screenshot 3" width="300" />
+  <img src="https://raw.githubusercontent.com/vaibhavpandeyprayag/rn_ui_dropdown/main/src/ss_default_ss.png" alt="Screenshot 1" width="300" />
+  <img src="https://raw.githubusercontent.com/vaibhavpandeyprayag/rn_ui_dropdown/main/src/ss_options_ss.png" alt="Screenshot 2" width="300" />
+  <img src="https://raw.githubusercontent.com/vaibhavpandeyprayag/rn_ui_dropdown/main/src/ss_selected_ss.png" alt="Screenshot 3" width="300" />
 </p>
-  <img src="https://raw.githubusercontent.com/vaibhavpandeyprayag/rn_dropdown/main/src/ss_styled.png" alt="Screenshot 4" width="300" />
+
+## Single-select Screenshots
+
+<p align="left">
+  <img src="https://raw.githubusercontent.com/vaibhavpandeyprayag/rn_ui_dropdown/main/src/ms_options_ss.png" alt="Screenshot 1" width="300" />
+  <img src="https://raw.githubusercontent.com/vaibhavpandeyprayag/rn_ui_dropdown/main/src/ms_options_selected_ss.png" alt="Screenshot 2" width="300" />
+  <img src="https://raw.githubusercontent.com/vaibhavpandeyprayag/rn_ui_dropdown/main/src/ms_selected_ss.png" alt="Screenshot 3" width="300" />
+</p>
 
 ## Properties
 

@@ -30,10 +30,7 @@ function App(): React.JSX.Element {
   const [data, setData] = useState([
     {id: 1, name: 'Delhi'},
     {id: 2, name: 'Mumbai'},
-    {
-      id: 3,
-      name: 'MSAMB will handle this action from here',
-    },
+    {id: 3, name: 'Gurjrat'},
     {id: 4, name: 'Goa'},
     {id: 5, name: 'Chennai'},
     {id: 6, name: 'Jaipur'},
@@ -44,7 +41,7 @@ function App(): React.JSX.Element {
     {id: 11, name: 'Jaipur'},
     {id: 2, name: 'Hyderabad'},
   ]);
-  const [val, setVal] = useState<any>(null);
+  const [val, setVal] = useState<any>([]);
   return (
     <SafeAreaView style={{}}>
       <StatusBar
@@ -61,7 +58,7 @@ function App(): React.JSX.Element {
         }}>
         {/* <View style={{marginVertical: 16}}> */}
         <RnUiDropdown
-          multiSelect={false}
+          multiSelect={true}
           options={data}
           selectedOption={val}
           bindingProp={'id'}
@@ -73,22 +70,6 @@ function App(): React.JSX.Element {
           placeholderText={'Select option'}
           searchPlaceholderText={'Search options'}
         />
-        {/* </View> */}
-        <Pressable>
-          <Text>Get me</Text>
-        </Pressable>
-        <Pressable>
-          <Text>Get me</Text>
-        </Pressable>
-        <Pressable>
-          <Text>Get me</Text>
-        </Pressable>
-        <Pressable>
-          <Text>Get me</Text>
-        </Pressable>
-        <Pressable>
-          <Text>Get me</Text>
-        </Pressable>
       </ScrollView>
     </SafeAreaView>
   );
