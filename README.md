@@ -62,7 +62,7 @@ const locationList = [
   <img src="https://raw.githubusercontent.com/vaibhavpandeyprayag/rn_ui_dropdown/main/src/ss_selected_ss.png" alt="Screenshot 3" width="300" />
 </p>
 
-## Single-select Screenshots
+## Multi-select Screenshots
 
 <p align="left">
   <img src="https://raw.githubusercontent.com/vaibhavpandeyprayag/rn_ui_dropdown/main/src/ms_options_ss.png" alt="Screenshot 1" width="300" />
