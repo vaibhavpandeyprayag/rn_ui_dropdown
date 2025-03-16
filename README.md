@@ -21,6 +21,7 @@ const locationList = [
 ];
 
 <RnUiDropdown
+  multiSelect={false}
   options={locationList}
   bindingProp={'value'}
   displayProp={'label'}
@@ -46,6 +47,7 @@ const locationList = [
 ];
 
 <RnUiDropdown
+  multiSelect={true}
   options={locationList}
   bindingProp={'value'}
   displayProp={'label'}
